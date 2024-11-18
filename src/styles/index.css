@@ -1,0 +1,33 @@
+.light {
+  --background-color: #faf4ed;
+  --background-color-contrast: #191724;
+  --text-color: #575279;
+  --header-color: #fffaf3;
+  --foreground-color: #9893a5;
+}
+
+.dark {
+  --background-color: #191724;
+  --background-color-contrast: #faf4ed;
+  --text-color: #e0def4;
+  --header-color: #1f1d2e;
+  --foreground-color: #6e6a86;
+}
+
+@font-face {
+  font-family: Book;
+  src: url("../fonts/GentiumBookPlus-Regular.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Book;
+  --page-color-transition: background 0.3s ease, color 0.3s ease;
+}
+
+body {
+  height: 100%;
+  overflow-x: hidden;
+}
