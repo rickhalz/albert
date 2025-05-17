@@ -4,15 +4,15 @@ import "../styles/App.css";
 import { Link, Routes, Route, useLocation } from "react-router-dom";
 import { CSSTransition, SwitchTransition } from "react-transition-group";
 import Home from "./Home.js";
-import Journals from "./Journals.js";
+import About from "./About.js";
 import Posts from "./Posts.js";
 import SunAndMoon from "./SunMoon";
 
 const routes = [
   {
-    path: "/journals",
-    name: "Journals",
-    element: <Journals />,
+    path: "/about",
+    name: "About",
+    element: <About />,
   },
   { path: "/", name: "Home", element: <Home /> },
   {
@@ -52,8 +52,8 @@ export default function AnimatedRoutes() {
             <div className="fade-wrapper">
               <Routes location={location}>
                 <Route path="/" element={<Home />} />
-                <Route path="/posts" element={<Posts />} />
-                <Route path="/journals" element={<Journals />} />
+                <Route path="/posts/*" element={<Posts />} />
+                <Route path="/about" element={<About />} />
               </Routes>
             </div>
           </CSSTransition>
